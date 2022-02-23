@@ -1,0 +1,3 @@
+[submodule "eMarka_frontend"]
+	path = eMarka_frontend
+	url = https://github.com/KarlUndheim/eMarka_frontend.git
