@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tickets",
+  "info": {
+    "singularName": "ticket",
+    "pluralName": "tickets",
+    "displayName": "Ticket",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "forSale": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "time": {
+      "type": "datetime",
+      "required": true
+    },
+    "lister": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "listings"
+    }
+  }
+}
